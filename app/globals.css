@@ -2,26 +2,198 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800;9..40,900;9..40,1000&display=swap");
+
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --font-base: "DM Sans", sans-serif;
+}
+html {
+  scroll-behavior: smooth !important;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+.app {
+  @apply font-[var(--font-base)] bg-primary;
+}
+
+.app-container {
+  @apply w-full min-h-[calc(100dvh)] flex flex-row;
+}
+
+.app-flex {
+  @apply flex justify-center items-center;
+}
+
+.app-wrapper {
+  @apply flex-1 w-full flex-col pt-16 pb-8 px-4 sm:px-8 sm:py-16;
+}
+
+.copyright {
+  @apply w-full p-8 sm:p-0 sm:pt-8 flex flex-col justify-end items-end;
+}
+
+.copyright p {
+  @apply uppercase text-blacknew;
+}
+
+.head-text {
+  @apply text-[2rem] xsm:text-[2.75rem] 3xl:text-[4rem] font-extrabold text-center text-blacknew capitalize;
+}
+
+.head-text span {
+  @apply text-secondary;
+}
+
+.p-text {
+  @apply text-[0.8rem] 3xl:text-[1.75rem] text-gray leading-normal;
+}
+
+.bold-text {
+  @apply text-[0.9rem] xsm:text-[1rem] 3xl:text-[2rem] font-extrabold text-blacknew text-left;
+}
+
+.social {
+  @apply flex justify-end items-center flex-row sm:flex-col p-4 max-sm:fixed max-sm:left-2 max-sm:bottom-2 max-sm:z-[200];
+}
+
+.social div {
+  @apply w-[40px] h-[40px] rounded-full bg-white my-1 max-sm:mx-1 max-sm:my-0 border-[1px] border-lightGray flex justify-center items-center transition-all duration-300 ease-in-out hover:bg-secondary hover:border-secondary 3xl:w-[70px] 3xl:h-[70px] 3xl:my-2 cursor-pointer;
+}
+
+.social div svg {
+  @apply w-[15px] h-[15px] text-gray 3xl:w-[30px] 3xl:h-[30px] transition-all duration-300 ease-in-out;
+}
+.social div:hover svg {
+  @apply text-white;
+}
+
+.navigation {
+  @apply hidden sm:flex justify-center items-center flex-col p-4;
+}
+
+.navigation .navigation-dot {
+  @apply w-[10px] h-[10px] rounded-full bg-navColor m-2 transition-all duration-200 ease-in-out hover:bg-secondary 3xl:w-[20px] 3xl:h-[30px];
+}
+
+/* Header */
+#home {
+  @apply bg-[url('/assets/bgIMG.png')] bg-cover bg-repeat bg-center relative;
+}
+
+#home .app-wrapper {
+  padding: 0;
+}
+
+#home .copyright {
+  display: none;
+}
+
+/* About
+#about {
+  background-color: white;
+} */
+/* circle cmp */
+.circle-cmp:nth-child(1) {
+  @apply w-[100px] h-[100px] 3xl:w-[400px] 3xl:h-[400px] max-xsm:w-[70px] max-xsm:h-[70px];
+}
+.circle-cmp:nth-child(2) {
+  @apply w-[150px] h-[150px] m-7 3xl:w-[570px] 3xl:h-[570px] 3xl:m-0 max-xsm:w-[120px] max-xsm:h-[120px];
+}
+.circle-cmp:nth-child(3) {
+  @apply w-[70px] h-[70px] 3xl:w-[200px] 3xl:h-[200px]  max-xsm:w-[50px] max-xsm:h-[50px];
+}
+
+/* work */
+.work-hover div {
+  font-family: var(--font-base);
+  font-weight: 800;
+  transition: all 0.3 ease;
+  @apply app-flex w-[50px] h-[50px] rounded-full bg-black/50 text-white m-4 cursor-pointer;
+}
+.work-hover div svg {
+  @apply w-1/2 h-1/2 text-white;
+}
+
+/* Skills */
+.skills-tooltip {
+  max-width: 340px !important;
+  background-color: white !important;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1) !important;
+  border-radius: 5px !important;
+  padding: 1rem !important;
+  color: #6b7688 !important;
+  text-align: center !important;
+  line-height: 1.5 !important;
+  opacity: 1 !important;
+}
+@media screen and (min-width: 2000px) {
+  .skills-tooltip {
+    font-size: 1.75rem !important;
+    max-width: 500px !important;
+    line-height: 2 !important;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+/* Testimonials */
+.testimonial-content p {
+  font-family: var(--font-base);
+}
+
+.testimonial-content h4 {
+  font-weight: 600 !important;
+  @apply text-[0.9rem] xsm:text-[1rem] 3xl:text-[2rem] mt-8 text-secondary text-left;
+}
+
+.testimonial-content h5 {
+  font-weight: 400;
+  @apply text-[0.8rem] 3xl:text-[1.75rem] text-gray leading-normal mt-[5px];
+}
+
+.testimonial-btns div {
+  @apply w-[50px] h-[50px] rounded-full bg-white hover:bg-secondary m-4  transition-all duration-300 ease-in-out;
+}
+
+.testimonial-btns div svg {
+  width: 20px;
+  height: 20px;
+  @apply text-secondary transition-all duration-300 ease-in-out;
+}
+
+.testimonial-btns div:hover svg {
+  @apply text-white;
+}
+
+/* Footer */
+.footer-card {
+  @apply min-w-[290px] max-xsm:w-full flex flex-row justify-start items-center my-4 p-4 rounded-[10px] cursor-pointer bg-[#fef4f5] transition-all duration-300 ease-in-out
+}
+
+
+.footer-card img {
+  @apply w-[40px] h-[40px] mx-[0.7rem]
+}
+
+.footer-card a {
+  font-weight: 500;
+}
+
+.footer-form div {
+  @apply w-full my-3 mx-0 rounded-[10px] cursor-pointer bg-primary transition-all duration-300 ease-in-out
+}
+.footer-form div:hover {
+  box-shadow: 0 0 25px #edf2f8;
+}
+
+.footer-form div input,
+.footer-form div textarea {
+  font-family: var(--font-base);
+  @apply w-full p-[0.95rem] border-none outline-none bg-primary rounded-[7px] text-secondary caret-secondary
+}
+
+.footer-form div textarea {
+  height: 170px;
+  resize: none;
+}
+
+.footer-form button {
+  font-family: var(--font-base);
 }
