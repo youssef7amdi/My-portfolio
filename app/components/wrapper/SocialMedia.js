@@ -7,17 +7,29 @@ const SocialMedia = () => {
   return (
     <div className="social">
       <div>
-        <Link href="https://www.instagram.com/youssef7amdi/" target="_blank" rel="noreferrer">
+        <Link
+          href="https://www.instagram.com/youssef7amdi2710/"
+          target="_blank"
+          rel="noreferrer"
+        >
           <BsInstagram />
         </Link>
       </div>
       <div>
-        <Link href="https://www.upwork.com/freelancers/~018b05d5bda4c35ef7" target="_blank" rel="noreferrer">
+        <Link
+          href="https://www.upwork.com/freelancers/~018b05d5bda4c35ef7"
+          target="_blank"
+          rel="noreferrer"
+        >
           <SiUpwork />
         </Link>
       </div>
       <div>
-        <Link href="https://web.facebook.com/youssef.hamdi.9212" target="_blank" rel="noreferrer">
+        <Link
+          href="https://web.facebook.com/youssef.hamdi.9212"
+          target="_blank"
+          rel="noreferrer"
+        >
           <FaFacebookF />
         </Link>
       </div>
@@ -27,7 +39,11 @@ const SocialMedia = () => {
         </Link>
       </div>
       <div>
-        <Link href="https://github.com/youssef7amdi" target="_blank" rel="noreferrer">
+        <Link
+          href="https://github.com/youssef7amdi"
+          target="_blank"
+          rel="noreferrer"
+        >
           <FaGithub />
         </Link>
       </div>
