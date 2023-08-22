@@ -32,7 +32,7 @@ const About = () => {
     <div className="flex-1 w-full flex-col">
       <h2 className="head-text">
         I Know That
-        <span> Good Apps</span>
+        <span> Good Websites</span>
         <br />
         means
         <span> Good Business</span>
