@@ -37,9 +37,6 @@ import spotify from "../../public/assets/spotify.png";
 import next from "../../public/assets/next.svg";
 import tailwind from "../../public/assets/tailwind.png";
 import youssef from "../../public/assets/youssef.png";
-import youssef2 from "../../public/assets/youssef2.png";
-import youssef3 from "../../public/assets/youssef3.png";
-import youssef4 from "../../public/assets/youssef4.png";
 import nextAbout from "../../public/assets/nextAbout.jpeg";
 
 export default {
@@ -79,8 +76,5 @@ export default {
   next,
   tailwind,
   youssef,
-  youssef2,
-  youssef3,
-  youssef4,
   nextAbout,
 };
