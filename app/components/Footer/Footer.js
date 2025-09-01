@@ -68,7 +68,7 @@ const Footer = () => {
               placeholder="Your Name"
               name="name"
               value={name}
-              onChange={(e) => handleChangeInput(e)}
+              onChange={handleChangeInput}
             />
           </div>
           <div className="app-flex">
@@ -78,7 +78,7 @@ const Footer = () => {
               placeholder="Your Email"
               name="email"
               value={email}
-              onChange={(e) => handleChangeInput(e)}
+              onChange={handleChangeInput}
             />
           </div>
           <div>
@@ -87,7 +87,7 @@ const Footer = () => {
               placeholder="Your Message"
               name="message"
               value={message}
-              onChange={(e) => handleChangeInput(e)}
+              onChange={handleChangeInput}
             />
           </div>
           <button type="button" className="text-[0.8rem] 3xl:text-[1.75rem] leading-normal py-4 px-8 bg-secondary cursor-pointer rounded-[10px] text-white font-[500] mt-8" onClick={handleSubmit}>
